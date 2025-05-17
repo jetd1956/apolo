@@ -51,7 +51,7 @@ class CategoryCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Cr
     url_redirect = success_url
 
     
-    def post(self, request,*args **kwargs):
+    def post(self, request,*args, **kwargs):
         data = {}
         try:
             action = request.POST['action']

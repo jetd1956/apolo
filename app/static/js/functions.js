@@ -14,7 +14,8 @@ function getCookie(name) {
     return cookieValue;
 }
 
-const csrftoken = getCookie('csrftoken');						  
+const csrftoken = getCookie('csrftoken');
+
 function message_error(obj) {
     var html = '';
     if (typeof (obj) === 'object') {
@@ -56,6 +57,7 @@ function submit_with_ajax(url, title, content, parameters, callback) {
                         dataType: 'json',
                         processData: false,
                         contentType: false,
+                        headers: {
                             'X-CSRFToken': csrftoken
                         }
                     }).done(function (data) {

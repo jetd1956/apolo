@@ -1,4 +1,5 @@
 from django.urls import path
+
 from core.erp.views.category.views import *
 from core.erp.views.client.views import *
 from core.erp.views.dashboard.views import *
